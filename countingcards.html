@@ -1,0 +1,37 @@
+
+<script>
+/*
+Counting Cards – This problem requires a count increment when a high card is encountered and a count decrement in case of a low card and count incurs no changes when a middle card is encountered. When the count is positive, the player must bet high and when the count is zero or negative, the player must bet low.
+*/
+var c=0;
+function card(x) {
+	switch(x) {
+		case 2 :
+		case 3 :
+		case 4 :
+		case 5 :
+		case 6 :
+			c++;
+			break;
+		case 7 :
+		case 8 :
+		case 9 :
+			break;
+		case 10 :
+		case "J" :
+		case "Q" :
+		case "K" :
+		case "A" :
+			c--;
+			break;
+	}
+	var b;
+	c>0? b = "high bet" : b = "low bet" ;
+	return c + " : " + b;
+}
+console.log(card(5));
+console.log(card(8));
+console.log(card(10));
+console.log(card(10));
+console.log(card("J"));
+</script>

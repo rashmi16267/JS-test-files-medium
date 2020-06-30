@@ -1,0 +1,21 @@
+<script>
+/*
+Checking for Object Properties – This code checks for the property mentioned in the given object
+*/
+	var objA = {
+		1: 7,
+		2: 8,
+		3: 9
+	};
+	function chkObj(x) {
+		if (objA.hasOwnProperty(x)) {
+			return objA[x];
+		}
+		else {
+			return "not found";
+		}
+	}
+	console.log(chkObj(2));
+	console.log(chkObj(1));
+	console.log(chkObj(4));
+</script>
