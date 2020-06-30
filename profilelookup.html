@@ -1,0 +1,43 @@
+<script>
+/*
+Profile Lookup – This problem requires the code to look-up a profile in an array of objects as contacts list and return the name and properties
+*/
+var ar = [
+	{
+		"FirstName" : "Apate",
+		"LastName" : "Macedonia",
+		"Number" : 18007997233,
+		"Address" : ["Johnston Atoll", 96898]
+	},
+	{
+		"FirstName" : "Medusa",
+		"LastName" : "Lakonia",
+		"Number" : 31039111253,
+		"Address" : ["Kingman Reef", 96898]
+	},
+	{
+		"FirstName" : "Helios",
+		"LastName" : "Karellis",
+		"Number" : 18006222255,
+		"Address" : ["Navassa Island", 28451]
+	}
+];
+
+function lookUp(n, prop) {
+	for(var i=0; i<ar.length; i++) {
+		
+		if(ar[i].FirstName == n) {
+			return ar[i][prop];
+			
+		}
+		
+	}
+   return "no such profile"; 
+}
+var disp1 = lookUp("Apate", "Address");
+var disp2 = lookUp("Medusa", "Number");
+var disp3 = lookUp("Macarena", "Address");
+console.log(disp1);
+console.log(disp2);
+console.log(disp3);
+</script>

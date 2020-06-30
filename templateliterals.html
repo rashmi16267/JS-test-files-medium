@@ -1,0 +1,19 @@
+<script>
+/*
+Strings Using Template Literals – This problem demonstrates the use of template literals to make a list using a function based on the array given as input to it.
+*/
+const r = {
+	top : ["pantera", "bora", "miura"],
+	mid : ["m1", "m5", "mk4"],
+	beginner : ["civic", "silvia", "corolla"]
+};
+function list1(a) {
+	const r1 = [];
+	for (let i = 0; i< a.length; i++) {
+		r1.push(`<li class = "starters">${a[i]}`)
+	}
+	return a;
+}
+const a = list1(r.mid);
+console.log(a);
+</script>

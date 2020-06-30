@@ -1,0 +1,35 @@
+<script>
+/*
+Record Collection – This problem requires you to update an object with a record collection as components
+*/
+var coll = {
+	"1": {
+		"Album " : "Piece of Mind",
+		"Artist " : "Iron Maiden",
+		"Tracks " : ["The Trooper", "Quest for Fire"]
+		},
+
+	"2": {
+		"Album " : "As Daylight Dies",
+		
+		"Tracks " : ["Unbroken", "Be One"]
+		},
+};
+var coll_1 = JSON.parse(JSON.stringify(coll));
+function correctColl(id, prop, value) {
+	if (value === "")	{
+		delete coll[id][prop];
+	}
+	else if (prop === "tracks") {
+		coll[id][prop] = coll[id][prop] || [];
+		coll[id][prop].push(value);
+	}
+	else{
+		coll[id][prop] = value;
+	}
+	return coll;
+}
+var coll_2 = JSON.parse(JSON.stringify(coll));
+console.log(correctColl(2, "Artist", "KillSwitch Engage"));
+console.log(coll_2);
+</script>
